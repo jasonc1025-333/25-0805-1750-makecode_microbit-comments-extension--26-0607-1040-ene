@@ -320,3 +320,25 @@ namespace quest_Note_6 {
 }
 
 
+
+
+// jwc 26-0713-0530
+
+/**
+ * jwc 26-0712-2000: BACKED OUT the _system_Led5x5_On_Bool / _system_Led5x5_OnAlways_Bool toggles — the driving lag was resolved by the OLED fixes (timer + dirty-check + zoom resting-state), not by gating the LED renders. All 5x5 renders are unconditional again (their original form). See 11j-README-KEYNOTES.md for the write-up of the attempted-but-unneeded fix.
+ */
+/**
+ * jwc 26-0710-2300: DriverDashboard (ETA) — persists the latest radio.onReceivedString payload so the OLED can show it "anytime", not just inside that callback
+ */
+/**
+ * //     quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
+ */
+/**
+ * //     "Whl_L:" + bot_OLED_PadNum3_Fn(bot_Motor_Left_Now_Int) + "%|Whl_R:" + bot_OLED_PadNum3_Fn(bot_Motor_Right_Now_Int) + "%",
+ */
+/**
+ * //     "Arm_L:" + bot_OLED_PadNum3_Fn(servoArm_Left_Now_Degrees_Int) + "|Arm_R:" + bot_OLED_PadNum3_Fn(servoArm_Right_Now_Degrees_Int) + "|Inc:" + bot_OLED_PadNum3_Fn(servoArm_Increment_Degrees_Int),
+ */
+/**
+ * jwc 26-0712-2300: removed unused global `let s = ""` — the OLED pad helpers now use a local `temp_str` instead of this shared scratch global.
+ */
